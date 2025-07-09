@@ -30,7 +30,7 @@
                     <p class="text-gray-400 mt-2">Vehículos activos</p>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 text-center">
-                    <p class="text-5xl font-bold text-yellow-400">S/ 2,250.00</p>
+                    <p class="text-5xl font-bold text-yellow-400">S/ {{ number_format($ingresosEsteMes, 2) }}</p>
                     <p class="text-gray-400 mt-2">Ingresos este mes</p>
                 </div>
                 <div class="bg-gray-800 rounded-xl p-6 text-center">
@@ -66,7 +66,6 @@
                             <p class="text-gray-400">No tienes historial de reservas.</p>
                         @endforelse
 
-                        <!-- Dummy Data -->
                         <div class="bg-gray-800 p-4 rounded-lg"><p class="font-bold">Valentino Palacios</p><p class="text-sm text-gray-400">Toyota Corolla 2022 - 3 días</p><p class="text-sm text-gray-400">16-18 Jun 2025</p></div>
                         <div class="bg-gray-800 p-4 rounded-lg"><p class="font-bold">Juan Solozandro</p><p class="text-sm text-gray-400">Toyota Corolla 2022 - 6 días</p><p class="text-sm text-gray-400">21-26 May 2025</p></div>
                     </div>
@@ -101,7 +100,7 @@
                             <p class="text-gray-400">No tienes reservas pendientes.</p>
                         @endforelse
 
-                        <!-- Dummy Data -->
+
                         <div class="bg-gray-800 p-4 rounded-lg"><div class="flex justify-between items-start"><div><p class="font-bold">You Gonzales</p><p class="text-sm text-gray-400">Toyota Corolla 2022 - 3 días</p><p class="text-sm text-gray-400">27-29 Jun 2025</p></div><span class="text-xs font-semibold px-3 py-1 rounded-full bg-green-500/20 text-green-400">Confirmado</span></div></div>
                         <div class="bg-gray-800 p-4 rounded-lg"><div class="flex justify-between items-start"><div><p class="font-bold">Johnny Sins</p><p class="text-sm text-gray-400">Mercedes-Benz T4 - 4 días</p><p class="text-sm text-gray-400">05-08 Agos 2025</p></div></div><div class="text-right mt-2"><a href="#" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors text-sm">Ver detalles</a></div></div>
 

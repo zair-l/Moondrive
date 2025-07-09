@@ -115,6 +115,6 @@ class AlquilerController extends Controller
             'estado' => 'pendiente',
         ]);
 
-        return redirect()->route('alquiler.index')->with('success', 'Tu solicitud de reserva ha sido enviada. Recibirás una notificación cuando el propietario responda.');
+        return redirect()->route('user.dashboard')->with('success', 'Tu solicitud de reserva ha sido enviada. Recibirás una notificación cuando el propietario responda.');
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vehiculo;
 use App\Models\Alquiler;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PropietarioController extends Controller
 {
@@ -20,7 +21,7 @@ class PropietarioController extends Controller
         $ingresosEsteMes = Alquiler::where('propietario_id', $propietarioId)
                                     ->where('estado', 'aprobado')
                                     ->whereMonth('created_at', now()->month)
-                                    ->sum('monto_total');
+                                    ->sum(DB::raw('monto_total * 0.9'));
 
         $reservasTotales = Alquiler::where('propietario_id', $propietarioId)->count();
 
@@ -62,8 +63,10 @@ class PropietarioController extends Controller
             abort(403);
         }
 
-        $alquiler->update(['estado' => 'aprobado']);
-        $alquiler->vehiculo->update(['rental_status' => 'En Renta']);
+        DB::transaction(function () use ($alquiler) {
+            $alquiler->update(['estado' => 'aprobado']);
+            $alquiler->vehiculo->update(['rental_status' => 'En Renta']);
+        });
 
         // Aquí se podría añadir una notificación para el usuario.
 

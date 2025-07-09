@@ -90,7 +90,7 @@
                             </div>
                             <div class="flex space-x-4 mt-4">
                                 <a href="{{ route('alquiler.index') }}" class="w-1/2 bg-gray-500 text-white text-center py-3 rounded-lg hover:bg-gray-600 font-semibold">CANCELAR</a>
-                                <button type="submit" class="w-1/2 bg-[#1A1A2E] text-white text-center py-3 rounded-lg hover:bg-black font-semibold">CONTINUAR</button>
+                                <button type="submit" class="w-1/2 bg-[#1A1A2E] text-white text-center py-3 rounded-lg hover:bg-black font-semibold">Solicitar Reserva</button>
                             </div>
                         </div>
                     </form>

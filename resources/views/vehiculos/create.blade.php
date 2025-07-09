@@ -40,7 +40,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div>
                             <label class="block text-black font-semibold mb-2" for="marca">Marca</label>
-                            <input type="text" name="marca" id="marca" value="{{ old('marca') }}" required placeholder="Ej: Toyota" class="w-full rounded-md px-4 py-3 border-none bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <select name="marca" id="marca" required class="w-full rounded-md px-4 py-3 border-none bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option value="">Seleccione una marca</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="Tesla">Tesla</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Suzuki">Suzuki</option>
+                                <option value="Renault">Renault</option>
+                            </select>
                         </div>
                         <div>
                             <label class="block text-black font-semibold mb-2" for="modelo">Modelo</label>

@@ -16,7 +16,7 @@
                 <span class="text-yellow-400">MOON</span><span class="text-white">DRIVE</span>
             </a>
             
-            <!-- Desktop Menu -->
+
             <div class="flex-grow flex justify-center">
                 <nav class="flex items-center space-x-8">
                     <a href="{{ route('alquiler.index') }}" class="hover:text-yellow-400 transition-colors">Alquiler de autos</a>
@@ -25,7 +25,7 @@
                 </nav>
             </div>
 
-            <!-- Auth Links -->
+
             <div class="hidden md:flex items-center space-x-4">
                 @auth
                     <span class="font-semibold">Bienvenido, {{ Auth::user()->name }}</span>
@@ -43,7 +43,7 @@
                 @endauth
             </div>
 
-            <!-- Mobile Menu Button -->
+
             <div class="md:hidden">
                 <button @click="open = !open" class="text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+
         <div x-show="open" @click.away="open = false" class="md:hidden bg-black bg-opacity-90">
             <nav class="flex flex-col items-center space-y-4 py-8">
                 <a href="#" class="text-white font-semibold hover:text-yellow-400 transition">Alquiler de autos</a>
